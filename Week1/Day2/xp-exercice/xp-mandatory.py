@@ -1,16 +1,16 @@
 # Exercise 1: Converting Lists into Dictionaries
 
-"""
+
 keys = ['Ten', 'Twenty', 'Thirty']
 values = [10, 20, 30]
 
 print(dict(zip(keys,values)))
 
-"""
+
 
 
 #  Exercise 2: Cinemax #2
-"""
+
 family = {}
 
 # Ajouter les membres de la famille
@@ -39,11 +39,11 @@ for cle, val in family.items():
         print(f"Price of ticket for {cle} : $15")
 
 print(f"\nTotal cost for the family: ${price} ")
-"""
+
 
 
 # Exercice 3: Zara
-"""
+
 
 brand={
     "name": "Zara",
@@ -89,24 +89,24 @@ brand.update(more_on_zara)
 
 print(brand)
 
-"""
+
 
 # Exercise 4 : Some Geography
 
-"""
+
 def describe_city(city,country="Unknown"):
     print(f"{city} is in {country}")
 
 describe_city("Cité du port", "Côte d'Ivoire")
 describe_city("Shenzen", "Chine")
 describe_city("Paris")
-"""
+
 
 # Exercise 5 : Random
 
 
 import random
-"""
+
 def my_fonction(numb):
     nb_g=random.randint(1, 100)
 
@@ -118,10 +118,10 @@ def my_fonction(numb):
 
 
 my_fonction(3)
-"""
+
 
 # Exercise 6 : Let’s create some personalized shirts !
-"""
+
 
 #Step 1
 def make_shirt(size="large",text="I love Python"): #step 4
@@ -138,11 +138,11 @@ make_shirt("small","This the text for any shirt")
 make_shirt(size="small", text="Hello!")
 
 
-"""
+
 
 #  Exercise 7 : Temperature Advice
 
-"""
+
 
 def get_random_temp():
     
@@ -180,7 +180,7 @@ def main():
         print("It’s really hot! Stay cool.")
 
 main()
-"""
+
 
 # Exercise 8: Pizza Toppings
 price=10
