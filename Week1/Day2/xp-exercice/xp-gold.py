@@ -77,6 +77,7 @@ else:
 """
 
 # Exercise 3: Check the index
+"""
 
 import random
 
@@ -105,3 +106,49 @@ def main():
     print(f"Average throws to reach doubles: {round(average, 2)}.")
 
 main()
+"""
+# Exercise 1: Cars
+
+"""
+nb_o=0
+nb_i=0
+chaine="Volkswagen, Toyota, Ford Motor, Honda, Chevrolet"
+chaine_list=chaine.split(',')
+print(f"There are {len(chaine_list)} manufacturers/companies")
+
+order_list=sorted(chaine_list)
+for i in range(-1,-len(order_list)-1,-1):
+    print(order_list[i])
+    if 'o' in order_list[i]:
+        nb_o+=1
+    elif 'i' in order_list[i]:
+        nb_i+=1
+
+# prime:
+new=["Honda", "Volkswagen", "Toyota", "Ford Motor", "Honda", "Chevrolet", "Toyota"]
+# Suppression des doublons
+new_set=set(new)
+
+ma_chaine=",".join(new_set)
+print(ma_chaine)
+print("Le nombre d'entreprise figurant dans la liste est: ",len(new_set))
+
+# prime: liste dans l'ordre décroissant avec inversement des lettres
+for i in sorted(new_set):
+    print(i[::-1])
+
+"""
+# Exercice 2 : Quel est votre nom ?
+
+"""
+def get_full_name(first_name, last_name, middle_name=""):
+    print(first_name,middle_name, last_name)
+
+get_full_name("ANGE DAVID","AKRE")
+
+"""
+
+# Exercice 3 : De l'anglais au morse
+
+
+
