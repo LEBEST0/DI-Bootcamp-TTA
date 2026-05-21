@@ -23,7 +23,7 @@ class Farm:
 
     def get_short_info(self):
         liste=self.get_animal_types()
-        fin=0
+        fin=1
         d=""
         
         print(f"{self.name} farm has ",end="")
@@ -32,10 +32,11 @@ class Farm:
             part=f"{nom}{pluriel}"
             
            
-            d=f"{part},"+d
-            fin+=1
+            d=d+f"{part},"
+            
             if fin==len(self.animals):
-                d=d[::-1]
+                d=d[0:len(d)-1]
+            fin+=1
         print(d)
             
             
@@ -52,7 +53,7 @@ class Farm:
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow', 5)
 macdonald.add_animal('sheep')
-macdonald.add_animal('sheep')
+macdonald.add_animal('cheap')
 macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
 macdonald.get_animal_types()
