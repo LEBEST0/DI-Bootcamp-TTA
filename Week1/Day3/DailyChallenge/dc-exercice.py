@@ -3,12 +3,13 @@ class Farm:
         self.name=farm_name
         self.animals={}
     
-    def add_animal(self,animal_type,count=1):
+    def add_animal(self,**kwargs):
 
-        if animal_type in self.animals.keys():
-            self.animals[animal_type]+=1
-        else:
-            self.animals[animal_type]=count
+        for nom,nb in kwargs.items():
+            if nom in self.animals :
+                self.animals[nom]+=nb
+            else:
+                self.animals[nom]=nb
         
     def get_info(self):
         s=""
@@ -51,10 +52,7 @@ class Farm:
 
 # Test the code 
 macdonald = Farm("McDonald")
-macdonald.add_animal('cow', 5)
-macdonald.add_animal('sheep')
-macdonald.add_animal('cheap')
-macdonald.add_animal('goat', 12)
+macdonald.add_animal(cow= 5, sheep = 2, goat = 12)
 print(macdonald.get_info())
 macdonald.get_animal_types()
 macdonald.get_short_info()
