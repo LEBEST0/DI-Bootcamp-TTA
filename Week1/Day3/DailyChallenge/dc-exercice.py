@@ -16,6 +16,35 @@ class Farm:
              s= s + f"{name} : {nb}\n"
         else:    
           return s+"\n E-I-E-I-0!"
+    
+    def get_animal_types(self):
+        animals_list=sorted(self.animals.keys())
+        return animals_list
+
+    def get_short_info(self):
+        liste=self.get_animal_types()
+        fin=0
+        d=""
+        
+        print(f"{self.name} farm has ",end="")
+        for nom, nb in self.animals.items(): 
+            pluriel="s" if nb>1 else ""
+            part=f"{nom}{pluriel}"
+            
+           
+            d=f"{part},"+d
+            fin+=1
+            if fin==len(self.animals):
+                d=d[::-1]
+        print(d)
+            
+            
+
+            
+            
+        
+
+
           
         
 
@@ -26,3 +55,10 @@ macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
+macdonald.get_animal_types()
+macdonald.get_short_info()
+
+# Bonus: Expand The Farm
+
+# Step 6: Implement the get_animal_types Method
+
