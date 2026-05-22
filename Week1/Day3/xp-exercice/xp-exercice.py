@@ -107,7 +107,6 @@ class Zoo():
             print(f"{key}: {val}")
 
 
-
 #Step 2: Create a Zoo Object
     
 zo=Zoo("Le premier zo",["Baboon","Bear","Cat","Giraffe","Lion","Zebra"])
