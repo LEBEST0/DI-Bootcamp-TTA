@@ -1,3 +1,4 @@
+"""
 class Cat:
     def __init__(self, cat_name, cat_age):
         self.name = cat_name
@@ -69,13 +70,14 @@ stairway = Song(["There’s a lady who's sure", "all that glitters is gold", "an
 
 stairway.sing_me_a_song()
 
+"""
 
 # Exercise 4 : Afternoon at the Zoo
 
 class Zoo():
     def __init__(self,zoo_name,animals):
         self.zoo_name=zoo_name
-        self.animals=animals
+        self.animals=[]
     
     def add_animal(self,new_animal):
         if new_animal not in self.animals:
@@ -86,17 +88,20 @@ class Zoo():
             print(animal,"is currently in the zoo")
     
     def sell_animal(self,animal_sold):
-        for i in range(len(self.animals)):
-            if self.animals[i]==animal_sold:
-               del self.animals[i]
-               break
+        if animal_sold in self.animals: 
+            self.animals.remove(animal_sold)
+
     def sort_animals(self):
-        new_animals=sorted(self.animals)
+        self.animals=sorted(self.animals)
+        
         dic={}
-        for anim in new_animals:
+        for anim in self.animals:
             anim=anim.capitalize()
             if anim[0] in dic.keys():
-                dic[anim[0]].append(anim)
+                if anim in dic[anim[0]]:
+                    pass
+                else:
+                   dic[anim[0]].append(anim)
             else:
                 dic[anim[0]]=[anim]
         return dic
@@ -114,9 +119,11 @@ zo=Zoo("Le premier zo",["Baboon","Bear","Cat","Giraffe","Lion","Zebra"])
 #Step 3: Call the Zoo Methods
 
 zo.add_animal("Panda")
+zo.add_animal("Panda")
+zo.add_animal("eanda")
 zo.get_animals()
 zo.sell_animal("Baboon")
-zo.sort_animals()
+print(zo.sort_animals())
 zo.get_groups()
 
 
@@ -130,7 +137,8 @@ class Zoo1():
     
     def add_animal(self,*args):
         for new_animal in args:
-           self.animals.append(new_animal)
+          if new_animal not in args:
+            self.animals.append(new_animal)
 
     def get_animals(self):
         for animal in self.animals:
