@@ -43,7 +43,7 @@ class Pagination:
         return "\n".join(str(item) for item in self.get_visible_items())
 
 
-# ── Tests ──────────────────────────────────────────────────────────────────────
+# Tests 
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")
 p = Pagination(alphabetList, 4)
 
