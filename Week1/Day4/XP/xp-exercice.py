@@ -1,4 +1,3 @@
-"""
 class Pets():
     def __init__(self, animals):
         self.animals = animals
@@ -41,10 +40,9 @@ sara_pets=Pets(all_cats)
 #Step 4: Take Cats for a Walk
 
 sara_pets.walk()
-"""
 
 #Exercise 2: Dogs
-"""
+
 
 
 class Dog:
@@ -80,9 +78,9 @@ print(dog2.run_speed())
 print(dog1.fight(dog2))
 
 
-"""
+
 #Exercise 3: Dogs Domesticated
-"""
+
 import random
 from dog_cl import Dog
 
@@ -140,7 +138,7 @@ p3=PetDog("Dog 3",2,6,False)
 p1.train()
 p1.play(p2,p3)
 p1.do_a_trick()
-"""
+
 
 # xercise 4: Family and Person Classes
 
